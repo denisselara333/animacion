@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Bebidas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image:url(descarga\ \(2\).jpeg);
+            overflow: hidden;
+        }
+        
+        
+        .bote{
+            position: absolute;
+            width: 60px;
+            height: 180px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            z-index: 10;
+        }
+        
+        .bote:hover {
+            transform: scale(1.1);
+        }
+        
+        
+        /* Botella de naranja*/
+        .bote.orange {
+            top: 320px;
+            left: 28.4%;
+            width: 200px; 
+            height: 150px;
+            animation: moveOrange 6s infinite;
+        }
+        
+        
+        /* Botella de Fresa */
+        .bote.red {
+            top: 345px;
+            left: 600px;
+            width: 87px; 
+            height: 121px;
+            animation: moveRed 6s infinite;
+        }
+        
+        /* Botella de Manzana Verde */
+        .bote.green {
+            top: 347px;
+            left: 58.6%;
+            width: 150px; 
+            height: 118px;
+            animation: moveGreen 6s infinite;
+        }
+        
+       
+        
+        /* Frutas */
+        .splash {
+            position: absolute;
+            opacity: 0;
+            transition: opacity 0.5s;
+            z-index: 5;
+        }
+        
+        /* Naranja */
+        .splash.orange {
+            top: 18%;
+            left: 40%;
+            width: 80px;
+            height: 100px;
+            animation: showsplash1 6s infinite;
+        }
+    
+        /* Fresa */
+        .splash.red {
+            top: 19.3%;
+            left: 48%;
+            width: 80px;
+            height: 80px;
+            animation: showsplash2 6s infinite;
+        }
+
+        /* Manzana*/
+        .splash.green {
+            top: 20%;
+            left: 55%;
+            width: 90px;
+            height: 60px;
+            animation: showsplash3 6s infinite;
+        }
+        
+        /* Animaciones */
+        @keyframes moveOrange {
+            0% { transform: translate(0, 0); }
+            30% { transform: translate(100px, -50px); }
+            35% { transform: translate(80px, -40px) rotate(-10deg); }
+            40% { transform: translate(60px, -30px); }
+            70% { transform: translate(0, 0); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes moveRed {
+            0% { transform: translate(0, 0); }
+            30% { transform: translate(0, -50px); }
+            35% { transform: translate(0, -40px) rotate(5deg); }
+            40% { transform: translate(0, -30px); }
+            70% { transform: translate(0, 0); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes moveGreen {
+            0% { transform: translate(0, 0); }
+            30% { transform: translate(-100px, -50px); }
+            35% { transform: translate(-80px, -40px) rotate(10deg); }
+            40% { transform: translate(-60px, -30px); }
+            70% { transform: translate(0, 0); }
+            100% { transform: translate(0, 0); }
+        }
+        
+        @keyframes showsplash1 {
+            0% { opacity: 0; transform: scale(0); }
+            35% { opacity: 0; transform: scale(0); }
+            40% { opacity: 1; transform: scale(1.2); }
+            45% { opacity: 1; transform: scale(1); }
+            65% { opacity: 1; transform: scale(1); }
+            70% { opacity: 0; transform: scale(0); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+        
+        @keyframes showsplash2 {
+            0% { opacity: 0; transform: scale(0); }
+            35% { opacity: 0; transform: scale(0); }
+            40% { opacity: 1; transform: scale(1.2); }
+            45% { opacity: 1; transform: scale(1); }
+            65% { opacity: 1; transform: scale(1); }
+            70% { opacity: 0; transform: scale(0); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+        
+        @keyframes showsplash3 {
+            0% { opacity: 0; transform: scale(0); }
+            35% { opacity: 0; transform: scale(0); }
+            40% { opacity: 1; transform: scale(1.2); }
+            45% { opacity: 1; transform: scale(1); }
+            65% { opacity: 1; transform: scale(1); }
+            70% { opacity: 0; transform: scale(0); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+        
+    </style>
+</head>
+<body>
+    <img src="orange-removebg-preview.png" class="bote orange">
+    <img src="strawberry-removebg-preview.png" class="bote red">
+    <img src="green-removebg-preview.png" class="bote green">
+    <img src="splash-orange.png" class="splash orange">
+    <img src="strawberry_splash.png" class="splash red">
+    <img src="green_splash.png" class="splash green">
+
+</body>
+</html>
